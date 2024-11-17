@@ -1,0 +1,64 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  gap: 50px;
+}
+.container .r-side .title {
+  font-size: 2em;
+  font-weight: bold;
+}
+.container .r-side .desc {
+  line-height: 1.5;
+}
+.container .r-side .checklist {
+  margin-top: 20px;
+}
+.container .r-side ul {
+  list-style: none;
+}
+
+.l-side {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.l-side .cards {
+  background-color: #6a6a6a;
+  width: 400px;
+  border-radius: 10px;
+  padding: 10px;
+}
+.l-side .cards.card-1 {
+  align-self: flex-end;
+}
+.l-side .star {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.l-side .name {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.author-info {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 16px;
+  color: rgb(55, 65, 81);
+}
+
+.author-info a {
+  text-decoration: none;
+}/*# sourceMappingURL=style.css.map */
