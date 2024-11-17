@@ -9,35 +9,50 @@ body {
 }
 
 .container {
+  margin: 0 auto;
+  height: 100vh;
+  width: 90%;
   display: flex;
-  flex-direction: column;
-  padding: 30px;
-  gap: 50px;
+  justify-content: center;
+  align-items: center;
+}
+.container .r-side {
+  width: 50%;
 }
 .container .r-side .title {
-  font-size: 2em;
+  font-size: 3em;
   font-weight: bold;
 }
 .container .r-side .desc {
-  line-height: 1.5;
+  font-size: 1.2em;
+  line-height: 1.7;
+  margin: 20px 0;
 }
 .container .r-side .checklist {
-  margin-top: 20px;
+  font-size: 1.2em;
+}
+.container .r-side .checklist ul li {
+  margin: 10px 0;
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 .container .r-side ul {
   list-style: none;
 }
 
 .l-side {
+  width: 50%;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 50px;
 }
 .l-side .cards {
-  background-color: #6a6a6a;
-  width: 400px;
+  background-color: #fff;
+  width: 350px;
   border-radius: 10px;
   padding: 10px;
+  box-shadow: 5px 5px 15px rgb(79, 79, 79);
 }
 .l-side .cards.card-1 {
   align-self: flex-end;
@@ -50,6 +65,11 @@ body {
 .l-side .name {
   font-size: 1.1em;
   font-weight: bold;
+  margin: 5px 0;
+}
+.l-side .comment {
+  font-size: 1.15em;
+  line-height: 1.5;
 }
 
 .author-info {
@@ -61,4 +81,22 @@ body {
 
 .author-info a {
   text-decoration: none;
+}
+
+@media screen and (min-width: 480px) {
+  .cards.card-1 {
+    justify-self: flex-start;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .l-side {
+    width: 100%;
+  }
+  .container .r-side {
+    width: 100%;
+    margin-bottom: 20px;
+  }
 }/*# sourceMappingURL=style.css.map */

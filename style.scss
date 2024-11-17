@@ -6,24 +6,46 @@
 
   body {
     height: 100vh;
+   
   }
 
   .container{
+    margin: 0 auto;
+    height: 100vh;
+    // background-color: #6a6a6a;
+    width: 90%;
     display: flex;
-    flex-direction: column;
-    padding: 30px;
-    gap: 50px;
+   justify-content: center;
+   align-items: center;
+    // gap: 50px;
+
     .r-side{
+      // background-color: antiquewhite;
+      width: 50%;
         .title{
-            font-size: 2em;
+            font-size: 3em;
             font-weight: bold;
         }
         .desc{
-            line-height: 1.5;
+          font-size: 1.200em;
+            line-height: 1.7;
+            margin: 20px 0;
         }
 
         .checklist{
-            margin-top: 20px;
+          font-size: 1.200em;
+            // margin-top: 20px;
+            ul{
+
+            }
+
+            ul li{
+              margin: 10px 0;
+              display: flex;
+              // flex-direction: column;
+              gap: 10px;
+              align-items: center;
+            }
         }
 
         ul{
@@ -34,14 +56,19 @@
 
 
   .l-side{
+    // background-color: aqua;
+    width: 50%;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    // align-items: center;
+    // justify-content: space-around;
+    gap: 50px;
     .cards{
-        background-color: #6a6a6a;
-        width: 400px;
+        background-color: #fff;
+        width: 350px;
         border-radius: 10px;
        padding: 10px;
+       box-shadow: 5px 5px 15px rgb(79, 79, 79)
     }
 
     .cards.card-1{
@@ -49,6 +76,8 @@
     }
 
     .star{
+     
+     
         display: flex;
         align-items: center;
         gap: 15px;
@@ -57,6 +86,12 @@
     .name{
         font-size: 1.1em;
         font-weight: bold;
+        margin: 5px 0;
+    }
+
+    .comment{
+        font-size: 1.150em;
+          line-height: 1.5;
     }
   }
 
@@ -70,3 +105,37 @@
   .author-info a {
     text-decoration: none;
   }
+
+// for Mobile
+@media screen and (min-width: 480px){
+  .cards.card-1{
+    justify-self: flex-start;
+  }
+
+}
+
+// for Tablet
+@media screen and (max-width: 768px) {
+  .container{
+    flex-direction: column;
+
+    .l-side{
+      width: 100%;
+    }
+
+    .r-side{
+      width: 100%;
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// for Desktop
+@media screen and (min-width: 992px){
+  
+}
+
+// for Huge
+@media screen and (min-width: 1280px){
+
+} 
